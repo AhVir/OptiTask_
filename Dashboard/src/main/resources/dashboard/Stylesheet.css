@@ -1,0 +1,143 @@
+/*!* Sidebar and Menu *!*/
+
+/*.parent {*/
+/*    -fx-background-color: #f4f4f4;*/
+/*}*/
+
+/*.sidebar {*/
+/*    -fx-background-color: #ffffff;*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 5, 0);*/
+/*    -fx-background-radius: 30px;*/
+/*}*/
+
+/*.sidebar_opt {*/
+/*    -fx-fill: #F3F3F3;*/
+/*    -fx-font-size: 1.5em;*/
+/*    -fx-cursor: hand;*/
+/*}*/
+
+/*.sidebar_opt:hover {*/
+/*    -fx-fill: #0862d0;*/
+/*}*/
+
+/*!* Active icon circle highlight *!*/
+/*.sidebar_opt.active {*/
+/*    -fx-fill: #ffffff;*/
+/*    -fx-background-color: #0862d0;*/
+/*    -fx-background-radius: 50%;*/
+/*    -fx-padding: 5px;*/
+/*}*/
+
+/*.menuButton {*/
+/*    -fx-fill: #0862d0;*/
+/*    -fx-cursor: hand;*/
+/*}*/
+
+/*.menuButton:hover {*/
+/*    -fx-fill: #2c5f9e;*/
+/*    -fx-scale-x: 1.2;*/
+/*    -fx-scale-y: 1.2;*/
+/*}*/
+
+/*!* Welcome Label *!*/
+/*.welcomeLabel {*/
+/*    -fx-font-size: 24px;*/
+/*    -fx-text-fill: #0862d0;*/
+/*    -fx-font-weight: bold;*/
+/*}*/
+
+
+/*!* Inactive icon styling *!*/
+/*.sidebar_opt.inactive {*/
+/*    -fx-fill: #B0BEC5; !* Light gray for inactive icons *!*/
+/*}*/
+
+/*!* Active icon styling *!*/
+/*.sidebar_opt.active {*/
+/*    -fx-fill: #0862d0; !* Blue for active icons *!*/
+/*    -fx-background-color: #0862d0; !* Optional for a circular background *!*/
+/*    -fx-background-radius: 50%;*/
+/*    -fx-padding: 5px;*/
+/*}*/
+
+/*.sidebar_opt {*/
+/*    -fx-fill: #F3F3F3;*/
+/*    -fx-font-size: 1.5em;*/
+/*    -fx-cursor: hand;*/
+/*    -fx-transition: all 0.3s ease;*/
+/*}*/
+
+/*.sidebar_opt:hover {*/
+/*    -fx-fill: #0862d0;*/
+/*    -fx-scale-x: 1.2;*/
+/*    -fx-scale-y: 1.2;*/
+/*}*/
+
+/* Sidebar and Menu */
+/* Sidebar and Menu */
+.parent {
+    -fx-background-color: #f4f4f4;
+}
+
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 5, 0);
+    -fx-background-radius: 30px;
+    -fx-padding-top: 20px; /* Adjusted for alignment */
+    -fx-min-height: 100%; /* Ensures the sidebar stretches to the full height */
+    -fx-pref-height: 100%; /* Ensures the sidebar stretches to the full height */
+}
+
+/* Sidebar icons */
+.sidebar_opt {
+    -fx-fill: #F3F3F3;
+    -fx-font-size: 1.5em;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.sidebar_opt:hover {
+    -fx-fill: #0862d0;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Active icon circle highlight */
+.sidebar_opt.active {
+    -fx-fill: #ffffff;
+    -fx-background-color: #0862d0;
+    -fx-background-radius: 50%;
+    -fx-padding: 5px;
+}
+
+/* Menu Button */
+.menuButton {
+    -fx-fill: #0862d0;
+    -fx-cursor: hand;
+}
+
+.menuButton:hover {
+    -fx-fill: #2c5f9e;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Welcome Label */
+.welcomeLabel {
+    -fx-font-size: 24px;
+    -fx-text-fill: #0862d0;
+    -fx-font-weight: bold;
+}
+
+/* Inactive icon styling */
+.sidebar_opt.inactive {
+    -fx-fill: #B0BEC5; /* Light gray for inactive icons */
+}
+
+/* Active icon styling */
+.sidebar_opt.active {
+    -fx-fill: #0862d0; /* Blue for active icons */
+    -fx-background-color: #0862d0; /* Optional for a circular background */
+    -fx-background-radius: 50%;
+    -fx-padding: 5px;
+}

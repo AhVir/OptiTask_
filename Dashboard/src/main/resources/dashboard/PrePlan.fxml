@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.TextField?>
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.PreplanController">
+    <VBox alignment="CENTER" prefHeight="800.0" prefWidth="800.0" spacing="15" style="-fx-background-color: #e8f4fc; padding: 20; -fx-border-color: #0078d7; -fx-border-width: 2;">
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #0078d7;" text="Plan Your Day" />
+
+        <!-- Date Selection -->
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #0078d7;">
+            <Text style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Select Date:" />
+            <DatePicker fx:id="datePicker" promptText="Pick a date" />
+        </VBox>
+
+        <!-- Mandatory Tasks -->
+        <VBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #0078d7;">
+            <Text style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Mandatory Tasks:" />
+            <HBox alignment="CENTER" spacing="10">
+                <TextField fx:id="taskNameField" promptText="Task Name" />
+                <TextField fx:id="taskStartTimeField" promptText="Start Time (HH:mm)" />
+                <TextField fx:id="taskEndTimeField" promptText="End Time (HH:mm)" />
+                <Button onAction="#addTask" text="Add Task" />
+            </HBox>
+            <ListView fx:id="taskListView" style="-fx-background-color: #f8f8f8; -fx-border-color: #ccc;" />
+        </VBox>
+
+        <!-- Flexible Tasks -->
+        <VBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #0078d7;">
+            <Text style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Flexible Tasks:" />
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Number of Meals: " />
+                <Spinner fx:id="mealSpinner" editable="true" initialValue="3" max="10" min="1" />
+            </HBox>
+
+            <!-- Gym Time in Hours and Minutes -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Gym Time (Hours:Minutes): " />
+                <Spinner fx:id="gymHourSpinner" editable="true" initialValue="1" max="5" min="0" />
+                <Label text=":" />
+                <Spinner fx:id="gymMinuteSpinner" editable="true" initialValue="0" max="59" min="0" />
+            </HBox>
+
+            <!-- Sleep Time in Hours and Minutes -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Sleep Time (Hours:Minutes): " />
+                <Spinner fx:id="sleepHourSpinner" editable="true" initialValue="8" max="12" min="4" />
+                <Label text=":" />
+                <Spinner fx:id="sleepMinuteSpinner" editable="true" initialValue="0" max="59" min="0" />
+            </HBox>
+        </VBox>
+
+        <!-- Save Button -->
+        <Button onAction="#savePreplan" style="-fx-font-size: 16px; -fx-background-color: #0078d7; -fx-text-fill: white;" text="Save Preplan" />
+    </VBox>
+</AnchorPane>

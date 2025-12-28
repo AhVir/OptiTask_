@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="chatgpt.ChatAppController" spacing="10" style="-fx-background-color: #ffffff;" alignment="top_center">
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" style="-fx-background: #f4f4f4;" VBox.vgrow="ALWAYS">
+        <VBox fx:id="chatBox" spacing="10" padding="10" style="-fx-background-color: #f4f4f4;" />
+    </ScrollPane>
+    <TextField fx:id="inputField" promptText="Type your message..." prefHeight="40" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5px;" />
+</VBox>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800" prefWidth="1080.0" styleClass="parent" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.DashboardController">
+    <left>
+        <AnchorPane fx:id="sidebar" prefHeight="601.0" prefWidth="66.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="6.0" layoutY="212.0" prefHeight="176.0" prefWidth="54.0">
+                    <children>
+                        <FontAwesomeIcon fx:id="homeIcon" fill="#0862d0" glyphName="HOME" onMouseClicked="#onHomeButtonClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets bottom="20.0" left="15.0" top="10.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="calenderIcon" glyphName="CALENDAR" onMouseClicked="#onCalendarIconClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets left="15.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="groupIcon" glyphName="GROUP" onMouseClicked="#onGroupIconClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets left="15.0" top="20.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="gearIcon" glyphName="GEAR" onMouseClicked="#onSettingsIconClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets left="15.0" top="20.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+
+    <FontAwesomeIcon fx:id="menuButton" glyphName="BARS" layoutX="15.0" layoutY="32.0" onMouseClicked="#toggleSidebar" size="1.5em" styleClass="menuButton" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0" />
+
+    <center>
+        <AnchorPane prefHeight="601.0" prefWidth="959.0" BorderPane.alignment="CENTER">
+            <children>
+                <StackPane fx:id="contentPane" layoutX="14.0" layoutY="5.0" prefHeight="790.0" prefWidth="989.0">
+                    <children>
+                        <!-- The labels are now inside contentPane to transition smoothly -->
+                        <Label fx:id="homeLabel" layoutX="54.0" layoutY="14.0" styleClass="homeLabel" text="Home" textAlignment="JUSTIFY" textFill="#2f39a3">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="welcomeLabel" layoutX="666.0" layoutY="14.0" styleClass="welcomeLabel" text="Welcome Mate!">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </StackPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

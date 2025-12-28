@@ -1,0 +1,133 @@
+/* Override the default Modena styles */
+.label {
+    -fx-text-fill: #007bff; /* Set a solid color instead of a gradient */
+}
+
+/* Calendar container styling */
+.calendar-container {
+    -fx-background-color: #ffffff; /* White background for the calendar */
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-padding: 10px;
+}
+
+/* Cells inside the calendar */
+.calendar-container .cell {
+    -fx-background-color: #f0f0f0; /* Light gray background */
+    -fx-border-color: #dcdcdc; /* Light border color */
+    -fx-border-width: 1px; /* Thin border */
+    -fx-padding: 8px; /* Space inside the cell */
+    -fx-alignment: center; /* Center the content */
+    -fx-font-size: 16px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+}
+
+/* Hover effect for calendar cells */
+.calendar-container .cell:hover {
+    -fx-background-color: #b0e0e6; /* Light blue on hover */
+}
+
+/* Style for the "today" cell */
+.calendar-container .today {
+    -fx-background-color: #007bff; /* Blue background for today */
+    -fx-text-fill: white; /* White text for today */
+}
+
+/* Regular date cells */
+.calendar-container .date {
+    -fx-font-size: 16px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-text-fill: #333333; /* Dark gray text color */
+}
+
+/* Task summary text */
+.calendar-container .task-summary {
+    -fx-font-size: 14px; /* Smaller font size */
+    -fx-text-fill: #333333; /* Dark gray text */
+}
+
+/* Styling for task names */
+.calendar-container .task-name {
+    -fx-font-size: 14px;
+    -fx-text-fill: #007bff; /* Blue color for task names */
+    -fx-font-weight: bold;
+}
+
+/* Style for task details (smaller font) */
+.calendar-container .task-details {
+    -fx-font-size: 12px; /* Smaller font for task details */
+    -fx-text-fill: #666666; /* Lighter gray text */
+}
+
+/* Styling for the "Add Task" button */
+.add-task-button {
+    -fx-background-color: #007bff; /* Blue background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for Add Task button */
+.add-task-button:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+    -fx-scale-x: 1.1; /* Slightly enlarge button on hover */
+    -fx-scale-y: 1.1;
+}
+
+/* Styling for the task input dialog */
+.task-dialog {
+    -fx-background-color: #f7f7f7; /* Light gray background */
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+}
+
+/* Styling for the date and time input fields in the task dialog */
+.task-dialog .input-field {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #dcdcdc; /* Light border color */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 5px 10px;
+    -fx-font-size: 14px; /* Font size */
+}
+
+/* Styling for the task input fields */
+.task-dialog .input-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; /* Dark gray text for labels */
+    -fx-font-weight: bold;
+}
+
+/* Styling for the submit button in the task dialog */
+.task-dialog .submit-button {
+    -fx-background-color: #007bff; /* Blue background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+/* Hover effect for submit button */
+.task-dialog .submit-button:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the cancel button in the task dialog */
+.task-dialog .cancel-button {
+    -fx-background-color: #f0f0f0; /* Light gray background */
+    -fx-text-fill: #333333; /* Dark gray text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+/* Hover effect for cancel button */
+.task-dialog .cancel-button:hover {
+    -fx-background-color: #e0e0e0; /* Slightly darker gray on hover */
+}

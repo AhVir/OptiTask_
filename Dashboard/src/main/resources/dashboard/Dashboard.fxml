@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800" prefWidth="1080.0" styleClass="parent" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.DashboardController">
+
+    <!-- Sidebar -->
+    <left>
+        <AnchorPane fx:id="sidebar" prefHeight="800.0" prefWidth="66.0" styleClass="sidebar">
+            <children>
+                <VBox layoutX="10.0" layoutY="332.0" spacing="20">
+                    <children>
+                        <FontAwesomeIcon fx:id="homeIcon" glyphName="HOME" onMouseClicked="#onHomeButtonClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets left="15.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="calendarIcon" glyphName="CALENDAR" onMouseClicked="#onCalendarIconClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets left="15.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="groupIcon" glyphName="GROUP" onMouseClicked="#onGroupIconClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets left="15.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="settingsIcon" glyphName="GEAR" onMouseClicked="#onSettingsIconClick" size="1.5em" styleClass="sidebar_opt">
+                            <VBox.margin>
+                                <Insets left="15.0" />
+                            </VBox.margin>
+                        </FontAwesomeIcon>
+                    </children>
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+
+    <!-- Center Content -->
+    <center>
+        <AnchorPane>
+            <StackPane fx:id="contentPane" prefHeight="800.0" prefWidth="1014.0">
+                <children>
+                    <!-- Default content -->
+                    <Label fx:id="defaultLabel" styleClass="welcomeLabel" text="Welcome to the Dashboard!">
+                        <font>
+                            <Font size="24.0" />
+                        </font>
+                    </Label>
+                </children>
+            </StackPane>
+        </AnchorPane>
+    </center>
+
+    <!-- Menu Button -->
+    <top>
+        <AnchorPane>
+            <FontAwesomeIcon fx:id="menuButton" glyphName="BARS" layoutX="15.0" layoutY="20.0" onMouseClicked="#toggleSidebar" size="2em" styleClass="menuButton" />
+        </AnchorPane>
+    </top>
+
+</BorderPane>

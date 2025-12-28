@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.demo.LoginController" stylesheets="@style.css">
+    <children>
+        <!-- Login Pane -->
+        <VBox fx:id="loginPane" alignment="CENTER" spacing="10" layoutX="200" layoutY="100">
+            <Label text="Login" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <TextField fx:id="loginUsername" promptText="Username" prefWidth="200"/>
+            <PasswordField fx:id="loginPassword" promptText="Password" prefWidth="200"/>
+            <Button text="Login" prefWidth="200"/>
+            <Button text="Register" onAction="#handleRegisterClick" prefWidth="200"/>
+        </VBox>
+
+        <!-- Register Pane -->
+        <VBox fx:id="registerPane" alignment="CENTER" spacing="10" layoutX="200" layoutY="100" visible="false">
+            <Label text="Register" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <TextField fx:id="registerUsername" promptText="Username" prefWidth="200"/>
+            <PasswordField fx:id="registerPassword" promptText="Password" prefWidth="200"/>
+            <PasswordField fx:id="registerConfirmPassword" promptText="Confirm Password" prefWidth="200"/>
+            <Button text="Register" prefWidth="200"/>
+            <Button text="Back to Login" onAction="#handleBackToLoginClick" prefWidth="200"/>
+        </VBox>
+    </children>
+</AnchorPane>

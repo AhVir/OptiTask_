@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="600.0" prefWidth="1080.0" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.GroupWindowController">
+    <!-- Left side: Groups List and Create Group Button -->
+    <VBox alignment="CENTER" prefHeight="601.0" prefWidth="349.0" spacing="10">
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Your Groups" />
+        <ListView fx:id="groupListView" prefHeight="412.0" prefWidth="350.0" />
+        <!-- Create Group Button -->
+        <Button fx:id="createGroupButton" onAction="#openCreateGroupWindow" style="-fx-font-size: 14px;" text="Create Group" />
+        <!-- Join Group Button -->
+        <Button fx:id="joinGroupButton" onAction="#joinGroupButtonClicked" style="-fx-font-size: 14px;" text="Join a Group" />
+    </VBox>
+
+    <!-- Right side: Chat Area -->
+    <VBox alignment="CENTER" prefHeight="601.0" prefWidth="675.0" spacing="10">
+        <!-- Group Details -->
+        <Label fx:id="groupNameLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Select a Group" />
+        <TextArea fx:id="chatArea" editable="false" prefHeight="310.0" prefWidth="676.0" />
+
+        <!-- Message Input -->
+        <HBox alignment="CENTER" spacing="10">
+            <TextField fx:id="messageInputField" promptText="Enter your message here..." HBox.hgrow="ALWAYS" />
+            <Button fx:id="sendMessageButton" onAction="#sendMessageButtonClicked" style="-fx-font-size: 14px;" text="Send" />
+        </HBox>
+    </VBox>
+</HBox>

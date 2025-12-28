@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="contentPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.calendarWindowController">
+
+    <BorderPane prefHeight="800.0" prefWidth="1080.0" stylesheets="@styles/calendarStyle.css">
+        <!-- Main Content -->
+        <center>
+            <AnchorPane prefHeight="750.0" prefWidth="880.0" styleClass="main-content">
+                <children>
+                    <!-- Month Navigation -->
+                    <AnchorPane layoutX="402.0" layoutY="25.0" prefHeight="50.0" prefWidth="300.0">
+                        <children>
+                            <Button fx:id="previousButton" layoutX="20.0" layoutY="12.0" text="&lt;" />
+                            <Label fx:id="monthLabel" layoutX="87.0" layoutY="10.0" text="January 2025">
+                                <font>
+                                    <Font name="System Bold" size="20.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="nextButton" layoutX="260.0" layoutY="12.0" text="&gt;" />
+                        </children>
+                    </AnchorPane>
+
+                    <!-- Calendar Grid -->
+                    <GridPane fx:id="calendarGrid" layoutX="163.0" layoutY="102.0" prefHeight="500.0" prefWidth="700.0">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="100.0" />
+                            <ColumnConstraints prefWidth="100.0" />
+                            <ColumnConstraints prefWidth="100.0" />
+                            <ColumnConstraints prefWidth="100.0" />
+                            <ColumnConstraints prefWidth="100.0" />
+                            <ColumnConstraints prefWidth="100.0" />
+                            <ColumnConstraints prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="50.0" />
+                            <RowConstraints prefHeight="100.0" />
+                            <RowConstraints prefHeight="100.0" />
+                            <RowConstraints prefHeight="100.0" />
+                            <RowConstraints prefHeight="100.0" />
+                            <RowConstraints prefHeight="100.0" />
+                        </rowConstraints>
+                    </GridPane>
+
+                    <!-- Add Task Button -->
+                    <Button fx:id="addTaskButton" layoutX="480.0" layoutY="628.0" onAction="#showAddTaskDialog" styleClass="add-task-button" text="Add Task" />
+
+                    <!-- Preplan Task Button -->
+                    <Button fx:id="preplanTaskButton" layoutX="468.0" layoutY="702.0" onAction="#showPreplanWindow" styleClass="add-task-button" text="Preplan Task" />
+                </children>
+            </AnchorPane>
+        </center>
+    </BorderPane>
+</StackPane>

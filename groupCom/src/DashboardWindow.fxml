@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.DashboardWindowController" spacing="10" alignment="CENTER">
+    <Label text="Welcome to the Dashboard" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <Button fx:id="logoutButton" text="Logout" onAction="#handleLogoutAction" style="-fx-font-size: 14px;"/>
+
+    <!-- Button to go to the Group UI -->
+    <Button fx:id="groupListButton" text="Go to Group" onAction="#openGroupWindow" style="-fx-font-size: 14px;"/>
+
+    <!-- Add additional components here for dashboard features -->
+</VBox>
